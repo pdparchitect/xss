@@ -2,7 +2,14 @@ swagger: '2.0'
 info:
   version: 1.0.0
   title: Html injection
-  description: '<script>alert(document.cookie || "There are no cookies!")</script>'
+  description: '<!DOCTYPE html>
+<html>
+<head>
+<script>alert(document.cookie || 'There are no cookies')</script>
+<body>
+</body>
+</html>
+'
 paths:
   /:
     get:
